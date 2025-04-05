@@ -2,7 +2,7 @@ import joblib
 from sentence_transformers import SentenceTransformer
 
 model_embedding = SentenceTransformer('all-MiniLM-L6-v2')  # Lightweight embedding model
-model_classification = joblib.load(r"D:\log_file_classifier\log_classification_model.pkl")
+model_classification = joblib.load("log_file_classifier/model/log_classification_model.pkl")
 
 def classify_with_bert(log_message):
     embeddings = model_embedding.encode([log_message])
